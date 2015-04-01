@@ -9,6 +9,7 @@ int main() {
 	a.push(2);
 	a.push(5);
 	a.push(6);
+	a.pop();
 	a.push(7);
 
 	

@@ -49,7 +49,7 @@ template<class T>
 
 		inline ~ArrayStack() {delete[] ary_;}
 		void push(const T &);
-		inline void pop() {--topIndex_;}
+		void pop();
 		inline int size() const {return topIndex_;}
 		void print() const;
 		inline T top() const {return ary_[topIndex_-1];}
@@ -57,6 +57,11 @@ template<class T>
 
 	};
 
+}
+
+template<class T>
+void zhlib::ArrayStack<T>::pop() {
+	if (topIndex_>0) --topIndex_;
 }
 
 template<class T>
